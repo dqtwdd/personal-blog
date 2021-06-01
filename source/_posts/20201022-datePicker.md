@@ -2,6 +2,7 @@
 title: 手撸datePicker
 tags: ["工作"]
 categories: 工作
+date: 2020-10-22
 ---
 
 因为工作需要，自己手撸了一个 datePicker 记录一下主要的思路内容。
