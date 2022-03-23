@@ -34,7 +34,7 @@
   // 建议在移动端不初始化，其实 /search.xml 文件还挺大的，
   if ($('.local-search').size()) {
     $.getScript('/js/search.js', function () {
-      searchFunc("/search.xml", 'local-search-input', 'local-search-result');
+      searchFunc('/search.xml', 'local-search-input', 'local-search-result');
     });
   }
 
@@ -56,22 +56,28 @@
       return navigator.userAgent.match(/IEMobile/i);
     },
     any: function () {
-      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
   };
 
   // Share
-  $('.share-outer').click(() => $('.share-wrap').fadeToggle())
+  $('.share-outer').click(() => $('.share-wrap').fadeToggle());
 
   // Lazyload
-  $("img.lazy").lazyload({
-    effect: "fadeIn"
+  $('img.lazy').lazyload({
+    effect: 'fadeIn',
   });
 
   // JustifiedGallery
   $('#gallery').justifiedGallery({
     rowHeight: 200,
-    margins: 5
+    margins: 5,
   });
 
   // ScrollDown
@@ -99,7 +105,7 @@
     $('.content').scroll(function () {
       const scrollTop = $('.content').scrollTop();
       if (scrollTop > upperLimit) {
-        $(scrollElem).stop().fadeTo(200, .6); // fade back in
+        $(scrollElem).stop().fadeTo(200, 0.6); // fade back in
       } else {
         $(scrollElem).stop().fadeTo(200, 0); // fade out
       }
@@ -107,7 +113,8 @@
 
     // Scroll to top animation on click
     $(scrollElem).click(function () {
-      $('.content').animate({ scrollTop: 0 }, scrollSpeed); return false;
+      $('.content').animate({ scrollTop: 0 }, scrollSpeed);
+      return false;
     });
   })();
 
@@ -116,40 +123,40 @@
     $sidebar = $('.sidebar');
 
   $('.navbar-toggle').on('click', function () {
-    $('.content,.sidebar').addClass('anim')
+    $('.content,.sidebar').addClass('anim');
     $content.toggleClass('on');
     $sidebar.toggleClass('on');
   });
 
   // Reward
   $('#reward-btn').click(() => {
-    $('#reward').fadeIn(150)
-    $('#mask').fadeIn(150)
+    $('#reward').fadeIn(150);
+    $('#mask').fadeIn(150);
   });
   $('#reward .close, #mask').click(() => {
-    $('#mask').fadeOut(100)
-    $('#reward').fadeOut(100)
-  })
+    $('#mask').fadeOut(100);
+    $('#reward').fadeOut(100);
+  });
 
   // DarkMode
   if (sessionStorage.getItem('darkmode') == 1) {
-    $('body').addClass('darkmode')
-    $('#todark i').removeClass('ri-moon-line').addClass('ri-sun-line')
+    $('body').addClass('darkmode');
+    $('#todark i').removeClass('ri-moon-line').addClass('ri-sun-line');
   } else {
-    $('body').removeClass('darkmode')
-    $('#todark i').removeClass('ri-sun-line').addClass('ri-moon-line')
+    $('body').removeClass('darkmode');
+    $('#todark i').removeClass('ri-sun-line').addClass('ri-moon-line');
   }
   $('#todark').click(() => {
     if (sessionStorage.getItem('darkmode') == 1) {
-      $('body').removeClass('darkmode')
-      $('#todark i').removeClass('ri-sun-line').addClass('ri-moon-line')
-      sessionStorage.removeItem('darkmode')
+      $('body').removeClass('darkmode');
+      $('#todark i').removeClass('ri-sun-line').addClass('ri-moon-line');
+      sessionStorage.removeItem('darkmode');
     } else {
-      $('body').addClass('darkmode')
-      $('#todark i').removeClass('ri-moon-line').addClass('ri-sun-line')
-      sessionStorage.setItem('darkmode', 1)
+      $('body').addClass('darkmode');
+      $('#todark i').removeClass('ri-moon-line').addClass('ri-sun-line');
+      sessionStorage.setItem('darkmode', 1);
     }
-  })
+  });
 
   // showThemeInConsole
   // const ayerInfo = '主题不错？⭐star 支持一下 ->';
@@ -171,7 +178,7 @@
   //   ayerNameStyle,
   //   ayerNameStr
   // );
-  document.write('<script type="text/javascript"  src="https://js.users.51.la/20544303.js"></script>');
+  document.write(
+    '<script type="text/javascript"  src="https://js.users.51.la/20544303.js"></script>'
+  );
 })(jQuery);
-
-

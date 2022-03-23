@@ -18,15 +18,21 @@
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",
     "hexo-generator-index": "^1.0.0",
-    "hexo-generator-searchdb": "^1.3.2",
+    "hexo-generator-search": "^2.4.3",
+    "hexo-generator-searchdb": "^1.3.4",
     "hexo-generator-tag": "^1.0.0",
     "hexo-helper-live2d": "^3.1.1",
     "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-markdown-it": "^5.0.0",
     "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-sass": "^0.4.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
+    "hexo-theme-ayer": "^1.9.2-0",
     "hexo-util": "^2.4.0",
     "live2d-widget-model-epsilon2_1": "^1.0.5",
-    "live2d-widget-model-haru": "^1.0.5"
+    "live2d-widget-model-haru": "^1.0.5",
+    "markdown-it-emoji": "^2.0.0",
+    "twemoji": "^13.1.0"
   }
 }
