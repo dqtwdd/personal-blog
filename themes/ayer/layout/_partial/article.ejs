@@ -26,14 +26,24 @@
       <a class="article-more-link" href="<%- url_for(post.path) %>"
         ><%= theme.excerpt_link %></a
       >
-      <% } %> <% } else { %> <%- post.content %> <% } %>
+      <% } %> <% } else { %>
+      <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+      <script src="//dqtwdd.top/cdn/article-insert/article-insert.js?v_0.2"></script>
+      <!-- <script>
+        if (location.pathname.length > 1) {
+          let title = $('[itemprop="name"]')[0].innerHTML.replace(
+            /^\s*|\s*$/g,
+            ''
+          );
+          console.log('pathname', title, location.pathname.length);
+        }
+      </script> -->
+      <%- post.content %> <% } %>
       <!-- reward -->
       <% if ((theme.reward_type === 2 || (theme.reward_type === 1 &&
       post.reward)) && !index && !post.no_reward){ %>
       <div id="reword-out">
-        <div id="reward-btn">
-          <%= __('post.reward') %>
-        </div>
+        <div id="reward-btn"><%= __('post.reward') %></div>
       </div>
       <% } %>
     </div>
