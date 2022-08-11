@@ -220,21 +220,21 @@ date: 2021-12-24
 
 | 状态 | 题目                                                         | 通过率 | 难度 |
 | :--- | :----------------------------------------------------------- | :----- | :--- |
-|      | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 35.9%  | 中等 |
-|      | [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/) | 59.0%  | 困难 |
-|      | [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/) | 77.3%  | 中等 |
-|      | [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | 53.3%  | 简单 |
+| ok   | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 35.9%  | 中等 |
+| Ok   | [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/) | 59.0%  | 困难 |
+| ok   | [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/) | 77.3%  | 中等 |
+| ok   | [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | 53.3%  | 简单 |
 |      | [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | 31.6%  | 困难 |
-|      | [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 57.4%  | 简单 |
+| ok   | [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 57.4%  | 简单 |
 |      | [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) | 44.6%  | 困难 |
 |      | [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/) | 61.5%  | 困难 |
-|      | [53. 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) | 55.3%  | 简单 |
-|      | [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/) | 60.6%  | 简单 |
+| ok   | [53. 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) | 55.3%  | 简单 |
+| ok   | [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/) | 60.6%  | 简单 |
 |      | [面试题 17.24. 最大子矩阵](https://leetcode-cn.com/problems/max-submatrix-lcci/) | 52.2%  | 困难 |
-|      | [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/) | 43.5%  | 中等 |
-|      | [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) | 36.1%  | 简单 |
+| ok   | [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/) | 43.5%  | 中等 |
+| ok   | [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) | 36.1%  | 简单 |
 |      | [152. 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) | 42.3%  | 中等 |
-|      | [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/) | 52.1%  | 中等 |
+| ok   | [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/) | 52.1%  | 中等 |
 |      | [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | 68.9%  | 中等 |
 |      | [剑指 Offer 13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) | 52.8%  | 中等 |
 |      | [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 52.2%  | 中等 |
@@ -416,3 +416,5 @@ date: 2021-12-24
 |      | [847. 访问所有节点的最短路径](https://leetcode-cn.com/problems/shortest-path-visiting-all-nodes/) | 67.9%  | 困难 |
 |      | [剑指 Offer II 001. 整数除法](https://leetcode-cn.com/problems/xoh6Oh/) | 20.8%  | 简单 |
 |      | [698. 划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets/) | 44.9%  | 中等 |
+
+贪心算法需要看
