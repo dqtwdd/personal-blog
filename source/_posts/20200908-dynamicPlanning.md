@@ -51,6 +51,7 @@ _quickly_ "Nine!"
 /**
  * @param {number[]} nums
  * @return {number}
+ * dp[i] =Math.max(dp[i-2]+nums[i],dp[i-1])
  */
 var massage = function (nums) {
   if (nums.length === 0) return 0
