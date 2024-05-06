@@ -105,7 +105,7 @@ theme: ayer
 deploy:
   type: git
   # repo: https://gitee.com/dqtwdd/dqtwdd.git # https://github.com/TJ-XiaJiaHao/TJ-XiaJiaHao.github.io
-  repo: git@github.com:dqtwdd/personal-blog.git:dqtwdd/dqtwdd.github.io.git
+  repo: https://github.com/dqtwdd/dqtwdd.github.io.git
   branch: master
 
 # hexo-generator-searchdb
