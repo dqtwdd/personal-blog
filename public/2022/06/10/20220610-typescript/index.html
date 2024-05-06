@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta name="referrer" content="no-referrer" />
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="JavaScript" />
+       
+      <meta name="description" content="咚咚咚咚咚棟de博客" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>
+        Typescript |  咚咚咚咚咚棟de博客
+      </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+ 
+<link rel="stylesheet" href="/css/custom.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+ 
+
+    <link rel="alternate" href="/atom.xml" title="咚咚咚咚咚棟" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-20220610-typescript"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Typescript
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/06/10/20220610-typescript/" class="article-date">
+  <time datetime="2022-06-09T16:00:00.000Z" itemprop="datePublished">2022-06-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">7 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+ 
+      <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+      <!-- <script src="//dqtwdd.top/cdn/article-insert/article-insert.js?v_0.2"></script> -->
+      <!-- <script>
+        if (location.pathname.length > 1) {
+          let title = $('[itemprop="name"]')[0].innerHTML.replace(
+            /^\s*|\s*$/g,
+            ''
+          );
+          console.log('pathname', title, location.pathname.length);
+        }
+      </script> -->
+      <p>Typescript学习笔记。</p>
+<span id="more"></span>
+
+<h3 id="1-基础类型"><a href="#1-基础类型" class="headerlink" title="1. 基础类型"></a>1. 基础类型</h3><h4 id="1-1基础类型"><a href="#1-1基础类型" class="headerlink" title="1.1基础类型"></a>1.1基础类型</h4><p>基础类型可以直接用<code>:</code>连接。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">isDone</span>: boolean = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">decLiteral</span>: number = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">name</span>: string = <span class="string">&quot;bob&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-数组"><a href="#1-2-数组" class="headerlink" title="1.2 数组"></a>1.2 数组</h4><p>数组可以有两种方法定义。第一种是在元素类型后面接<code>[]</code>，表示由此类型元素组成一个数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">list</span>:number[] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>第二种方式是实用数组泛型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">list</span>:<span class="title class_">Array</span>&lt;number&gt; = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-元组"><a href="#1-3-元组" class="headerlink" title="1.3 元组"></a>1.3 元组</h3><p>元组表示允许一个已知元素数量和类型的数组。各元素的类型不必相同。比如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">x</span>:[string,number];</span><br><span class="line">x = [<span class="string">&#x27;hello&#x27;</span>,<span class="number">1</span>] <span class="comment">// ok</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="string">&#x27;hello&#x27;</span>] <span class="comment">//Error</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-any"><a href="#1-4-any" class="headerlink" title="1.4 any"></a>1.4 any</h4><p>啥类型都行。尽量少用。</p>
+<h4 id="1-5-Void"><a href="#1-5-Void" class="headerlink" title="1.5 Void"></a>1.5 Void</h4><p>void类型像是与any类型相反。它表示没有任何类型。当一个函数没有任何返回时，可以使用<code>void</code>作为返回值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">error</span>(<span class="params"></span>):<span class="keyword">void</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;this is an error&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-6-Object"><a href="#1-6-Object" class="headerlink" title="1.6 Object"></a>1.6 Object</h4><p><code>object</code>表示非原始类型，也就是除<code>number</code>，<code>string</code>，<code>boolean</code>，<code>symbol</code>，<code>null</code>或<code>undefined</code>之外的类型。</p>
+<p>使用<code>object</code>类型，就可以更好的表示像<code>Object.create</code>这样的API。例如：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="keyword">function</span> <span class="title function_">create</span>(<span class="params">o: <span class="built_in">object</span> | <span class="literal">null</span></span>): <span class="built_in">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">create</span>(&#123; <span class="attr">prop</span>: <span class="number">0</span> &#125;); <span class="comment">// OK</span></span><br><span class="line"><span class="title function_">create</span>(<span class="literal">null</span>); <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">create</span>(<span class="number">42</span>); <span class="comment">// Error</span></span><br><span class="line"><span class="title function_">create</span>(<span class="string">&quot;string&quot;</span>); <span class="comment">// Error</span></span><br><span class="line"><span class="title function_">create</span>(<span class="literal">false</span>); <span class="comment">// Error</span></span><br><span class="line"><span class="title function_">create</span>(<span class="literal">undefined</span>); <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-接口"><a href="#2-接口" class="headerlink" title="2.接口"></a>2.接口</h3><h4 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h4><p>接口就是把要定义的type进行一个封装。例：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">print</span> (<span class="attr">param</span>:&#123;<span class="attr">label</span>:<span class="built_in">string</span>&#125;) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(param.<span class="property">lable</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">label</span>:<span class="string">&#x27;size&#x27;</span>,<span class="attr">size</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="title function_">print</span>(obj);</span><br><span class="line"><span class="comment">// 上面的例子用接口封装</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Param</span> &#123;</span><br><span class="line">  <span class="attr">label</span>:<span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">print</span> (<span class="attr">param</span>:<span class="title class_">Param</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(param.<span class="property">lable</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">label</span>:<span class="string">&#x27;size&#x27;</span>,<span class="attr">size</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="title function_">print</span>(obj);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-可选属性"><a href="#2-2-可选属性" class="headerlink" title="2.2 可选属性"></a>2.2 可选属性</h4><p>可选属性是对一些可能存在可能不存在的值进行type限定。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Bag</span> &#123;</span><br><span class="line">  color?:<span class="built_in">string</span>;</span><br><span class="line">  book?:<span class="built_in">string</span>;</span><br><span class="line">  pen?:<span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createBag</span> (<span class="attr">bag</span>:<span class="title class_">Bag</span>):&#123;<span class="attr">color</span>:<span class="built_in">string</span>;<span class="attr">size</span>:<span class="built_in">number</span>&#125;&#123;</span><br><span class="line">  <span class="keyword">let</span> newBag = &#123;<span class="attr">color</span>:<span class="string">&#x27;white&#x27;</span>,<span class="attr">size</span>:<span class="string">&#x27;big&#x27;</span>&#125;;</span><br><span class="line">  <span class="keyword">if</span> (bag.<span class="property">color</span>) &#123;</span><br><span class="line">    newBag.<span class="property">color</span> = bag.<span class="property">color</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newBag;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> myBag = <span class="title function_">createBag</span>(&#123;<span class="attr">color</span>:<span class="string">&#x27;black&#x27;</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>没加<code>?</code>的接口中的属性必须存在，不然就会报错。</p>
+<p>如果赋值接口不存在的值，ts也会报错，但是也能运行。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> test = reactive&lt;&#123;color?:<span class="built_in">string</span>;<span class="attr">book</span>:<span class="built_in">string</span>;<span class="attr">pen</span>:<span class="built_in">number</span>&#125;&gt;(&#123; <span class="attr">book</span>: <span class="string">&#x27;hello&#x27;</span> &#125;) </span><br><span class="line"><span class="comment">// 类型“&#123; book: string; &#125;”的参数不能赋给类型“&#123; color?: string | undefined; book: string; pen: number; &#125;”的参数。</span></span><br><span class="line"><span class="comment">// 类型&quot;&#123; book: string; &#125;&quot;中缺少属性 &quot;pen&quot;，但类型 &quot;&#123; color?: string | undefined; book: string; pen: number; &#125;&quot; 中需要该属性。ts(2345)</span></span><br><span class="line"><span class="keyword">const</span> test = reactive&lt;&#123;color?:<span class="built_in">string</span>;<span class="attr">book</span>:<span class="built_in">string</span>;pen?:<span class="built_in">number</span>&#125;&gt;(&#123; <span class="attr">book</span>: <span class="string">&#x27;hello&#x27;</span> &#125;) <span class="comment">// ok</span></span><br><span class="line">test.<span class="property">test</span> = <span class="string">&#x27;hah&#x27;</span> </span><br><span class="line"><span class="comment">// 类型“&#123; color?: string | undefined; book: string; pen: number; &#125;”上不存在属性“test”。ts(2339)</span></span><br></pre></td></tr></table></figure>
+
+<p>如果可能添加额外的属性，有三种方法。</p>
+<ol>
+<li>赋值给另一个变量</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> test &#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">book</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">pen</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = &#123; <span class="attr">color</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">book</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">pen</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">test</span>: <span class="string">&#x27;hello&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">const</span> test = reactive&lt;test&gt;(a)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>断言</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> test &#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">book</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">pen</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> test = reactive&lt;test&gt;(&#123; <span class="attr">color</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">book</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">pen</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">test</span>: <span class="string">&#x27;hello&#x27;</span> &#125; <span class="keyword">as</span> test)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>索引签名</li>
+</ol>
+<p>需要注意的是，索引签名也会约束已经定义的类型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> test &#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">book</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">pen</span>: <span class="built_in">string</span></span><br><span class="line">  [<span class="attr">x</span>: <span class="built_in">string</span>]: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> test = reactive&lt;test&gt;(&#123; <span class="attr">color</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">book</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">pen</span>: <span class="string">&#x27;1&#x27;</span>, <span class="attr">test</span>: <span class="string">&#x27;hello&#x27;</span> &#125;) <span class="comment">// ok</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> test &#123;</span><br><span class="line">  <span class="attr">pen</span>: <span class="built_in">number</span></span><br><span class="line">  [<span class="attr">x</span>: <span class="built_in">string</span>]: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> test = reactive&lt;test&gt;(&#123; <span class="attr">pen</span>: <span class="number">1</span>, <span class="attr">test</span>: <span class="string">&#x27;hello&#x27;</span> &#125;)</span><br><span class="line"><span class="comment">// 类型“&#123; pen: number; test: string; &#125;”的参数不能赋给类型“test”的参数。</span></span><br><span class="line"><span class="comment">// 属性“pen”与索引签名不兼容。</span></span><br><span class="line"><span class="comment">// 不能将类型“number”分配给类型“string”。ts(2345)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-只读属性"><a href="#2-3-只读属性" class="headerlink" title="2.3 只读属性"></a>2.3 只读属性</h4><p>使一些对象属性只能在对象刚创建时修改其值。可以在属性名县使用<code>readonly</code>来指定只读属性：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="keyword">readonly</span> <span class="attr">x</span>: <span class="built_in">number</span>;</span><br><span class="line">    <span class="keyword">readonly</span> <span class="attr">y</span>: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">p1</span>: <span class="title class_">Point</span> = &#123; <span class="attr">x</span>: <span class="number">10</span>, <span class="attr">y</span>: <span class="number">20</span> &#125;;</span><br><span class="line">p1.<span class="property">x</span> = <span class="number">5</span>; <span class="comment">// error!</span></span><br></pre></td></tr></table></figure>
+
+<p>最简单判断该用<code>readonly</code>还是<code>const</code>的方法是看要把它做为变量使用还是做为一个属性。 做为变量使用的话用 <code>const</code>，若做为属性则使用<code>readonly</code>。</p>
+<h4 id="2-4-implements和extends"><a href="#2-4-implements和extends" class="headerlink" title="2.4 implements和extends"></a>2.4 implements和extends</h4><p>个人感觉，理解这两个作用的最简单的方式就是从字面理解。</p>
+<p>implements 实现 就是 类 根据 接口/类 来实现具体的内容。</p>
+<p>extends 继承 就是 接口/类 继承 （接口，类）/（类） 的本身属性。</p>
+<p>原因是，类在构建过程中会自行创建一个类对应的接口，可以理解为接口是类的子集。</p>
+<p>基于这个理解，我们可以得到下面的表：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>interface</th>
+<th>class</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>interface</td>
+<td>extends</td>
+<td>extends</td>
+</tr>
+<tr>
+<td>class</td>
+<td>implements</td>
+<td>implements/extends</td>
+</tr>
+</tbody></table>
+<p><img src="https://dqtwdd.top/cdn/img/implements.jpg" alt="implements"></p>
+<h3 id="3-class"><a href="#3-class" class="headerlink" title="3. class"></a>3. class</h3><p>关于类，看了一些资料，感觉比较好的一个说法是：</p>
+<p>不要为了oop而使用class，大多数时候，函数式编程都可以解决我们的问题。学好 工厂函数/闭包 才是关键。</p>
+<p>来一个简单的小例子：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name:<span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">talk</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;I am &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">green</span>:<span class="title class_">Person</span>;</span><br><span class="line">green = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Green&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(green.<span class="title function_">talk</span>()); <span class="comment">// I am Green</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 有一个小问题，关于this指向</span></span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;</span><br><span class="line">test.<span class="property">func</span> = green.<span class="property">talk</span>;</span><br><span class="line">test.<span class="title function_">func</span>() <span class="comment">// &#x27;I am undefined&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案1 显式调用bind</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name:<span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">talk</span> = <span class="variable language_">this</span>.<span class="property">talk</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">talk</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;I am &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 解决方案2 箭头函数</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name:<span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  &#125;</span><br><span class="line">  talk = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;I am &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name:<span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">talk</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="string">&#x27;I am &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span></span><br><span class="line">  	&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 解决方案3 工厂函数</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Person</span> = (<span class="params">name</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: name,</span><br><span class="line">    <span class="attr">talk</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;I am &#x27;</span> + name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-函数"><a href="#4-函数" class="headerlink" title="4. 函数"></a>4. 函数</h3><p>为函数定义类型：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基础</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span> (<span class="attr">x</span>:<span class="built_in">number</span>, <span class="attr">y</span>:<span class="built_in">number</span>):<span class="built_in">number</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可选参数和默认参数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">buildName</span>(<span class="params">first:<span class="string">&#x27;bob&#x27;</span>,lastNmae?:<span class="built_in">string</span></span>)&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 剩余参数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">buildName</span>(<span class="params">first:<span class="built_in">string</span>,args:<span class="built_in">string</span>[]</span>)&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5. 泛型"></a>5. 泛型</h3><p>泛型用来捕获用户传入的类型，之后我们就可以使用这个类型。</p>
+<p>来一个简单的小例子：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> genericity&lt;T&gt; &#123;</span><br><span class="line">    <span class="attr">par</span>: T</span><br><span class="line">  	<span class="attr">test</span>: T</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> genericityTest = reactive&lt;genericity&lt;<span class="built_in">number</span>&gt;&gt;(&#123; <span class="attr">par</span>: <span class="number">1</span>, <span class="attr">test</span>: <span class="number">2</span> &#125;) <span class="comment">// ok</span></span><br><span class="line"><span class="keyword">const</span> genericityTest = reactive&lt;genericity&lt;<span class="built_in">string</span>&gt;&gt;(&#123; <span class="attr">par</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">test</span>: <span class="string">&#x27;&#x27;</span> &#125;) <span class="comment">// ok</span></span><br><span class="line"><span class="keyword">const</span> genericityTest = reactive&lt;genericity&lt;<span class="built_in">number</span>&gt;&gt;(&#123; <span class="attr">par</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">test</span>: <span class="number">2</span> &#125;) <span class="comment">// error</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数泛型</span></span><br><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">arg</span>: T): T &#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">打赏</div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dqtwdd.gitee.io/2022/06/10/20220610-typescript/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/06/16/20220616-project/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            项目总结
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/05/05/20220505-docker/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">docker</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "KNI0N4Khdh2ispLr2iFoS9CU-gzGzoHsz",
+    app_key: "hhc6Qpb7eOUWNirF5vBNgFfN",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2018-2024
+        <i class="ri-heart-fill heart_icon"></i> WangDong
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="咚咚咚咚咚棟"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+
+<script src="/js/clickBoom2.js"></script>
+
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru01.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

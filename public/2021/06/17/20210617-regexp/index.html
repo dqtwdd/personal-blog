@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta name="referrer" content="no-referrer" />
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="JavaScript" />
+       
+      <meta name="description" content="咚咚咚咚咚棟de博客" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>
+        正则 |  咚咚咚咚咚棟de博客
+      </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+ 
+<link rel="stylesheet" href="/css/custom.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+ 
+
+    <link rel="alternate" href="/atom.xml" title="咚咚咚咚咚棟" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-20210617-regexp"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  正则
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/17/20210617-regexp/" class="article-date">
+  <time datetime="2021-06-16T16:00:00.000Z" itemprop="datePublished">2021-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%AD%A3%E5%88%99/">正则</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">6 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+ 
+      <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+      <!-- <script src="//dqtwdd.top/cdn/article-insert/article-insert.js?v_0.2"></script> -->
+      <!-- <script>
+        if (location.pathname.length > 1) {
+          let title = $('[itemprop="name"]')[0].innerHTML.replace(
+            /^\s*|\s*$/g,
+            ''
+          );
+          console.log('pathname', title, location.pathname.length);
+        }
+      </script> -->
+      <p>正则学习</p>
+<span id="more"></span>
+
+<h3 id="普通字符"><a href="#普通字符" class="headerlink" title="普通字符."></a>普通字符.</h3><p><code>[ABC]</code> 匹配<code>[...]</code>中的所有字符，如<code>[abcde]</code>匹配<code>good good study day day up</code>中的所有a b c d e字母。</p>
+<p><code>[^ABC]</code> 匹配除了<code>[...]</code>中字符的所有字符，  如<code>[^abcde]</code>匹配<code>good good study day day up</code>中的除了a b c d e的所有字母。</p>
+<p><code>[A-Z]</code> 匹配<code>[...]</code>区间中的所有字母，如<code>[a-d]</code>匹配<code>good good study day day up</code>中的所有a b c d字母。</p>
+<p>. 匹配除了换行符之外的任意单个字符，相当于<code>[^\n\r]</code>。</p>
+<p><code>[\s\S]</code> 匹配所有<code>\s</code>匹配所有空白符，包括换行，<code>\S</code>匹配所有非空白符，不包括换行。</p>
+<p><code>\w</code> 匹配字母，数字，下划线。等价于<code>[A-Za-z0-9]</code>。</p>
+<p><code>\d</code> 匹配数字，等价于<code>[0-9]+?</code>。</p>
+<h3 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h3><p><code>\f</code>匹配一个换页符。</p>
+<p><code>\n</code>匹配一个换行符。</p>
+<p><code>\r</code>匹配一个回车符。</p>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p><code>$</code>匹配输入字符的结尾位置，如果要匹配$本身，则使用<code>\$</code>。</p>
+<p><code>()</code>标记一个子表达式的开始和结束位置，子表达式可以获取供以后使用，要匹配这些字符串，则使用<code>\(</code>和<code>\)</code>。子表达式可以与<code>\1 \2 \3....</code>配合使用，分别代表第一个子表达式/第二个子表达式/第三个子表达式…，值得注意的是，在使用<code>\1 \2 \3....</code>这种写法时，<code>\1</code>代表和第一个子表达式对应的值完全一致，比如字符串’abcd cdef abcd’，匹配<code>/\b([a-z]+) \1\b/gi</code>时，匹配的是<code>null</code>；而匹配<code>/\b([a-z]+) ([a-z]+)\b/gi</code>可以匹配到’abcd cdef’；匹配<code>/\b([a-z]+) ([a-z]+) \1\b/gi</code>时，可以匹配到’abcd cdef abcd’。</p>
+<p><code>*</code>匹配前面的子表达式任意次数（0,1,2,…..），如果要匹配本身，则使用<code>\*</code>。</p>
+<p><code>+</code>匹配前面的子表达式一次或多次（1,2,…..），如果要匹配本身，则使用<code>\+</code>。</p>
+<p><code>?</code>匹配前面的子表达式零次或1次（0,1），如果要匹配本身，则使用<code>\?</code>。</p>
+<p><code>[</code>标记一个中括号表达式的开始，如果要匹配本身，则使用<code>\[</code>。中括号中的表达式是单个匹配，比如<code>/abc/</code>匹配的是’abc’三个字母必须是挨着的，而<code>/[abc]/</code>是单独匹配’a’/‘b’/‘c’着三个字母。</p>
+<p><code>\</code>将后一个字符标记为或特殊字符，或原意字符。如<code>\\</code>表示<code>&#39;\&#39;</code>，<code>n</code>匹配<code>&#39;n&#39;</code>而<code>\n</code>匹配换行符。</p>
+<p><code>^</code>匹配字符串的开始位置，在方括号中使用时代表不接受该方括号表达式中的字符集合。</p>
+<p><code>&#123;</code>标记限定符表达式的开始。</p>
+<p><code>|</code>指明两项之一的选择。</p>
+<h3 id="限定符（配合-使用）"><a href="#限定符（配合-使用）" class="headerlink" title="限定符（配合{}使用）"></a>限定符（配合<code>&#123;&#125;</code>使用）</h3><p><code>*</code>匹配前面的子表达式任意次数（0,1,2,…..），如果要匹配本身，则使用<code>\*</code>。</p>
+<p><code>+</code>匹配前面的子表达式一次或多次（1,2,…..），如果要匹配本身，则使用<code>\+</code>。</p>
+<p><code>?</code>匹配前面的子表达式零次或1次（0,1），如果要匹配本身，则使用<code>\?</code>。</p>
+<p><code>&#123;n&#125;</code>匹配前面的表达式n次，n是一个非负整数。例如<code>o&#123;2&#125;</code>不能匹配’bob’中的’o’，但是可以匹配’food’中的两个’o’。</p>
+<p><code>&#123;n,&#125;</code>匹配前面的表达式至少n次，n是一个非负整数。例如<code>o&#123;1,&#125;</code>可以匹配’bob’中的’o’，也可以匹配’food’中的两个’o’。</p>
+<p><code>&#123;n,m&#125;</code>匹配前面的表达式最少n次，最多m次，m和n都是非负整数。例如<code>o&#123;2,3&#125;</code>不能匹配’bob’中的’o’，但是可以匹配’food’中的两个’o’，可以匹配’rooob’中的三个n。</p>
+<p><code>*</code>和<code>+</code>都是贪婪的，它们会尽可能多的匹配文字，只有在他们后面加上一个<code>?</code>就可以实现非贪婪或最小匹配。</p>
+<p>例如，在<code>&lt;h1&gt;RUNOOB-菜鸟教程&lt;/h1&gt;</code>中，使用正则表达式<code>/&lt;.*&gt;/</code>会匹配整个字符串，如果想匹配<code>&lt;h1&gt;</code>，则可以使用<code>/&lt;.*?&gt;/</code></p>
+<h3 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h3><p>定位符能使正则表达式定位到行首或行尾，它还可以创造这样的正则表达式，这些表达式出现在一个单词内，在一个单词的开头或者一个单词的结尾。</p>
+<p>定位符用来描述字符串或单词的边界：</p>
+<p><code>^</code>匹配输入字符串的开始的位置，如果设置了RegExp的Multiline属性，<code>^</code>还会与<code>\n \r</code>后的位置匹配。</p>
+<p><code>$</code>匹配输入字符串的开始的位置，如果设置了RegExp的Multiline属性，<code>$</code>还会与<code>\n \r</code>前的位置匹配。</p>
+<p><code>\b</code>匹配一个单词的边界，即字与空格之间的位置。</p>
+<p><code>\B</code>非单词边界匹配。</p>
+<p>不能将定位符和限定符一起使用，如<code>^*</code>这种写法是错误的。</p>
+<h3 id="选择符"><a href="#选择符" class="headerlink" title="选择符"></a>选择符</h3><p><code>|</code>代表匹配<code>|</code>前面或后面的表达式。比如想要匹配’grandfather’和’grandmother’可以使用表达式<code>/grand(father|mother)/g</code></p>
+<h3 id="环视-断言-非获取匹配"><a href="#环视-断言-非获取匹配" class="headerlink" title="环视/断言/非获取匹配"></a>环视/断言/非获取匹配</h3><p>此项下所有规则都有一个特点，就是该匹配不进行存储供以后使用，具体表现看<code>?:</code>。</p>
+<p><code>?:</code>子表达式是可以被记住并且在后面重复使用的，比如<code>/(y)\1/</code>其实匹配的是<code>\yy\</code>，再举个例子，使用字符串’gjrl4kfgrandfatherkrgag8fvfgrandsonfr6gaaf’分别匹配正则<code>/(g)(a)\1/</code>和<code>/(?:g)(a)\1/</code>，前一种匹配到的是’gag’，后一种匹配到的是’gaa’。</p>
+<p><code>exp1(?=exp2)</code>查找<code>exp2</code>前面的<code>exp1</code>并且不获取<code>exp2</code>对应的内容，如<code>/runoob(?=[\d+])/g</code>去匹配’1234runoob345runoob7898runoob’，返回的是’runoob,runoob’，即匹配到的是’345’和’7898’前面的’runoob’，并没有匹配到最后的’runoob’，因为它后面没有数字，称为“正向肯定预查”。</p>
+<p><code>exp1(!=exp2)</code>查找所有后面非<code>exp2</code>的<code>exp1</code>并且不获取<code>exp</code>后面的内容，如<code>/runoob(?![\d+])/g</code>去匹配’1234runoob345runooba7898runoob’，返回的是’runoob’，即匹配到的是’a’前面的’runoob’，并没有匹配到数字前的’runoob’，称为“正向否定预查”。</p>
+<p><code>(?&lt;=exp2)exp1</code>查找<code>exp2</code>后面的<code>exp1</code>并且不获取<code>exp2</code>对应的内容，如<code>/(?&lt;=[\d+])runoob/g</code>去匹配’1234runoob345arunoob7898runoob’，返回的是’runoob,runoob’，即匹配到的是’1234’和’7898’后面的’runoob’，并没有匹配到’a’后面的’runoob’，因为它后面没有数字，称为“反向肯定预查”。</p>
+<p><code>(?&lt;!exp2)exp1</code>查找非<code>exp2</code>后面的<code>exp1</code>，并且不获取非<code>exp2</code>对应的内容，如<code>/(?&lt;![\d+])runoob/g</code>去匹配’1234runoob345arunoob7898runoob’，返回的是’runoob’，即匹配到的是’a’后面的’runoob’，并没有匹配到数字后面的’runoob’，称为“反向否定预查”。</p>
+<h3 id="修饰符（标记）"><a href="#修饰符（标记）" class="headerlink" title="修饰符（标记）"></a>修饰符（标记）</h3><p>修饰符的使用方法<code>/pattern/flags</code>。</p>
+<p>常用修饰符：</p>
+<table>
+<thead>
+<tr>
+<th align="left">修饰符</th>
+<th align="left">含义</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">i</td>
+<td align="left">ignore - 不区分大小写</td>
+<td align="left">将匹配设置为不区分大小写，搜索时不区分大小写: A 和 a 没有区别。</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">global - 全局匹配</td>
+<td align="left">查找所有的匹配项。</td>
+</tr>
+<tr>
+<td align="left">m</td>
+<td align="left">multi line - 多行匹配</td>
+<td align="left">使边界字符 <strong>^</strong> 和 <strong>$</strong> 匹配每一行的开头和结尾，记住是多行，而不是整个字符串的开头和结尾。</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">特殊字符圆点 <strong>.</strong> 中包含换行符 <strong>\n</strong></td>
+<td align="left">默认情况下的圆点 <strong>.</strong> 是 匹配除换行符 <strong>\n</strong> 之外的任何字符，加上 <strong>s</strong> 修饰符之后, <strong>.</strong> 中包含换行符 \n。</td>
+</tr>
+</tbody></table>
+<h3 id="自己写的正则"><a href="#自己写的正则" class="headerlink" title="自己写的正则"></a>自己写的正则</h3><table>
+<thead>
+<tr>
+<th>正则</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>console.log(.*?);</td>
+<td>匹配所有console</td>
+</tr>
+</tbody></table>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">打赏</div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dqtwdd.gitee.io/2021/06/17/20210617-regexp/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/07/13/20210713-util/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            公共方法
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/06/01/20210601-setting.json/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">VsCode配置</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "KNI0N4Khdh2ispLr2iFoS9CU-gzGzoHsz",
+    app_key: "hhc6Qpb7eOUWNirF5vBNgFfN",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2018-2024
+        <i class="ri-heart-fill heart_icon"></i> WangDong
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="咚咚咚咚咚棟"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+
+<script src="/js/clickBoom2.js"></script>
+
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru01.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

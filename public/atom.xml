@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>咚咚咚咚咚棟</title>
+  
+  <subtitle>咚咚咚咚咚棟de博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://dqtwdd.gitee.io/"/>
+  <updated>2024-05-06T07:14:27.795Z</updated>
+  <id>https://dqtwdd.gitee.io/</id>
+  
+  <author>
+    <name>WangDong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简洁的log</title>
+    <link href="https://dqtwdd.gitee.io/2024/05/06/20240506-autolog/"/>
+    <id>https://dqtwdd.gitee.io/2024/05/06/20240506-autolog/</id>
+    <published>2024-05-05T16:00:00.000Z</published>
+    <updated>2024-05-06T07:14:27.795Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 简洁的log&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web-worker</title>
+    <link href="https://dqtwdd.gitee.io/2023/03/20/20230320-web-worker/"/>
+    <id>https://dqtwdd.gitee.io/2023/03/20/20230320-web-worker/</id>
+    <published>2023-03-19T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于web-worker的学习总结。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序分享总结</title>
+    <link href="https://dqtwdd.gitee.io/2023/02/27/20230227-miniProgram/"/>
+    <id>https://dqtwdd.gitee.io/2023/02/27/20230227-miniProgram/</id>
+    <published>2023-02-26T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;小程序&quot;&gt;&lt;a href=&quot;#小程序&quot; class=&quot;headerlink&quot; title=&quot;小程序&quot;&gt;&lt;/a&gt;小程序&lt;/h1&gt;&lt;h2 id=&quot;1-什么是小程序&quot;&gt;&lt;a href=&quot;#1-什么是小程序&quot; class=&quot;headerlink&quot; title=&quot;1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轮询问题</title>
+    <link href="https://dqtwdd.gitee.io/2023/02/21/20230221-axios/"/>
+    <id>https://dqtwdd.gitee.io/2023/02/21/20230221-axios/</id>
+    <published>2023-02-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天遇到了一个问题：&lt;/p&gt;
+&lt;p&gt;一个页面轮询请求接口，根据返回展示数据，轮询的时间比较短，一般在5s左右，我使用了setinterval就出现了以下问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一个请求的结果5秒还没返回，发送了第二次请求。&lt;/li&gt;
+&lt;li&gt;第一个请求发出之后，切换了tab（更改了请求的参数），发出了第二次请求，然后第一次返回的数据覆盖了第二次的数据，导致展示不正常。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;思考了一下，解决方案如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;轮询的方法用setTimeout代替setinterval，在接口返回数据之后再调用第二次。&lt;/li&gt;
+&lt;li&gt;更改请求参数发出新请求之后，取消上一次的请求，以最后一次的结果为准&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试准备-webpack/xss/其他</title>
+    <link href="https://dqtwdd.gitee.io/2022/11/21/20221121-interview-other/"/>
+    <id>https://dqtwdd.gitee.io/2022/11/21/20221121-interview-other/</id>
+    <published>2022-11-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录工作中想到的面试应该会的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试准备-html</title>
+    <link href="https://dqtwdd.gitee.io/2022/11/21/20221121-interview-html/"/>
+    <id>https://dqtwdd.gitee.io/2022/11/21/20221121-interview-html/</id>
+    <published>2022-11-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.217Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录工作中想到的面试应该会的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试准备-vue</title>
+    <link href="https://dqtwdd.gitee.io/2022/11/21/20221121-interview-vue/"/>
+    <id>https://dqtwdd.gitee.io/2022/11/21/20221121-interview-vue/</id>
+    <published>2022-11-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录工作中想到的面试应该会的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试准备-js</title>
+    <link href="https://dqtwdd.gitee.io/2022/11/21/20221121-interview-js/"/>
+    <id>https://dqtwdd.gitee.io/2022/11/21/20221121-interview-js/</id>
+    <published>2022-11-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录工作中想到的面试应该会的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wabpack</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/21/20221021-webpack/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/21/20221021-webpack/</id>
+    <published>2022-10-20T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.217Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;p&gt;这里我找了一些代表性的问题，试试看你能回答多少 😉&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问：Webpack 配置中用过哪些 Loader
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://dqtwdd.gitee.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://dqtwdd.gitee.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>试智力题</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-iq/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-iq/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.215Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;常见面试智力题总结&quot;&gt;&lt;a href=&quot;#常见面试智力题总结&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工具</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-tool/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-tool/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.216Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用工具知识总结&quot;&gt;&lt;a href=&quot;#常用工具知识总结&quot; class=&quot;headerlink&quot; title=&quot;常用工具知识总结&quot;&gt;&lt;/a&gt;常用工具知识总结&lt;/h2&gt;&lt;p&gt;本部分主要是笔者关于常用工具所做的笔记，如果出现错误，希望大家指出！&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机操作系统</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-pc/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-pc/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.216Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;计算机操作系统&quot;&gt;&lt;a href=&quot;#计算机操作系统&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指 offer</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-offer/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-offer/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.215Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;剑指-offer-思路总结&quot;&gt;&lt;a href=&quot;#剑指-offer-思路总结&quot; class=&quot;headerlink&quot; title=&quot;剑指 offer 思路总结&quot;&gt;&lt;/a&gt;剑指 offer 思路总结&lt;/h1&gt;&lt;p&gt;本部分主要是笔者在练习剑指 offer
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络知识</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-web/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-web/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.216Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;计算机网络知识总结&quot;&gt;&lt;a href=&quot;#计算机网络知识总结&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Html</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-Html/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-Html/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.213Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;HTML-面试知识点总结&quot;&gt;&lt;a href=&quot;#HTML-面试知识点总结&quot; class=&quot;headerlink&quot; title=&quot;HTML 面试知识点总结&quot;&gt;&lt;/a&gt;HTML 面试知识点总结&lt;/h2&gt;&lt;p&gt;本部分主要是笔者在复习 HTML
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Css</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-Css/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-Css/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.212Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;CSS-面试知识点总结&quot;&gt;&lt;a href=&quot;#CSS-面试知识点总结&quot; class=&quot;headerlink&quot; title=&quot;CSS 面试知识点总结&quot;&gt;&lt;/a&gt;CSS 面试知识点总结&lt;/h2&gt;&lt;p&gt;本部分主要是笔者在复习 CSS
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-arithmetic/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-arithmetic/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.215Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;算法知识总结&quot;&gt;&lt;a href=&quot;#算法知识总结&quot; class=&quot;headerlink&quot; title=&quot;算法知识总结&quot;&gt;&lt;/a&gt;算法知识总结&lt;/h1&gt;&lt;p&gt;本部分主要是笔者在学习算法知识和一些相关面试题所做的笔记，如果出现错误，希望大家指出！&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="https://dqtwdd.gitee.io/2022/10/19/20221019-JavaScript/"/>
+    <id>https://dqtwdd.gitee.io/2022/10/19/20221019-JavaScript/</id>
+    <published>2022-10-18T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.214Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;JavaScript-面试知识点总结&quot;&gt;&lt;a href=&quot;#JavaScript-面试知识点总结&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 面试知识点总结&quot;&gt;&lt;/a&gt;JavaScript
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://dqtwdd.gitee.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法</title>
+    <link href="https://dqtwdd.gitee.io/2022/06/16/20220616-algorithm/"/>
+    <id>https://dqtwdd.gitee.io/2022/06/16/20220616-algorithm/</id>
+    <published>2022-06-15T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.211Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结一下面试准备的算法和所用时间。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://dqtwdd.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目总结</title>
+    <link href="https://dqtwdd.gitee.io/2022/06/16/20220616-project/"/>
+    <id>https://dqtwdd.gitee.io/2022/06/16/20220616-project/</id>
+    <published>2022-06-15T16:00:00.000Z</published>
+    <updated>2024-05-06T07:10:56.211Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结一下手里的项目。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="工作" scheme="https://dqtwdd.gitee.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+</feed>

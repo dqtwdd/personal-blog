@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta name="referrer" content="no-referrer" />
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="JavaScript" />
+       
+      <meta name="description" content="咚咚咚咚咚棟de博客" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>
+        面试准备-html |  咚咚咚咚咚棟de博客
+      </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+ 
+<link rel="stylesheet" href="/css/custom.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+ 
+
+    <link rel="alternate" href="/atom.xml" title="咚咚咚咚咚棟" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-20221121-interview-html"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  面试准备-html
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/11/21/20221121-interview-html/" class="article-date">
+  <time datetime="2022-11-20T16:00:00.000Z" itemprop="datePublished">2022-11-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">4.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">19 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+ 
+      <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+      <!-- <script src="//dqtwdd.top/cdn/article-insert/article-insert.js?v_0.2"></script> -->
+      <!-- <script>
+        if (location.pathname.length > 1) {
+          let title = $('[itemprop="name"]')[0].innerHTML.replace(
+            /^\s*|\s*$/g,
+            ''
+          );
+          console.log('pathname', title, location.pathname.length);
+        }
+      </script> -->
+      <p>记录工作中想到的面试应该会的问题。</p>
+<span id="more"></span>
+
+<h2 id="1-HTML-CSS"><a href="#1-HTML-CSS" class="headerlink" title="1. HTML + CSS"></a>1. HTML + CSS</h2><h3 id="1-1-HTTP-状态码及其含义"><a href="#1-1-HTTP-状态码及其含义" class="headerlink" title="1.1 HTTP 状态码及其含义"></a>1.1 HTTP 状态码及其含义</h3><ul>
+<li>1XX：信息状态码<ul>
+<li>100 Continue 继续，一般在发送 post 请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息</li>
+</ul>
+</li>
+<li>2XX：成功状态码<ul>
+<li>200 OK 正常返回信息</li>
+<li>201 Created 请求成功并且服务器创建了新的资源</li>
+<li>202 Accepted 服务器已接受请求，但尚未处理</li>
+</ul>
+</li>
+<li>3XX：重定向<ul>
+<li>301 Moved Permanently 请求的网页已永久移动到新位置。</li>
+<li>302 Found 临时性重定向。</li>
+<li>303 See Other 临时性重定向，且总是使用 GET 请求新的 URI。</li>
+<li>304 Not Modified 自从上次请求后，请求的网页未修改过。</li>
+</ul>
+</li>
+<li>4XX：客户端错误<ul>
+<li>400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</li>
+<li>401 Unauthorized 请求未授权。</li>
+<li>403 Forbidden 禁止访问。</li>
+<li>404 Not Found 找不到如何与 URI 相匹配的资源。</li>
+</ul>
+</li>
+<li>5XX: 服务器错误<ul>
+<li>500 Internal Server Error 最常见的服务器端错误。</li>
+<li>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-如何进行网站性能优化"><a href="#1-2-如何进行网站性能优化" class="headerlink" title="1.2 如何进行网站性能优化"></a>1.2 如何进行网站性能优化</h3><ol>
+<li>页面懒加载。</li>
+<li>使用 webpack 插件（terser-webpack-plugin），在打包时删除冗余代码 。</li>
+<li>使用<strong>SplitChunks</strong> 手动将一些复用性高的文件抽离出来。</li>
+<li>使用 CDN。</li>
+<li>将较大的图片进行无损压缩。</li>
+</ol>
+<h3 id="1-3-H5-新增的特性-只列出了常用的几个"><a href="#1-3-H5-新增的特性-只列出了常用的几个" class="headerlink" title="1.3 H5 新增的特性(只列出了常用的几个)"></a>1.3 H5 新增的特性(只列出了常用的几个)</h3><ol>
+<li><p>新增语义化标签 <code>header nav footer section</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt; :头部标签</span><br><span class="line">&lt;nav&gt; : 导航标签</span><br><span class="line">&lt;footer&gt; :尾部标签</span><br><span class="line">&lt;section&gt; :块级标签</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增多媒体标签 <code>audio video </code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=<span class="string">&quot;MP3.mp3&quot;</span> controls=<span class="string">&quot;controls&quot;</span>&gt;您的浏览器不支持<span class="title class_">Audio</span>元素&lt;/audio&gt;</span><br><span class="line"></span><br><span class="line">video元素要设定好长宽和src属性就可以了：</span><br><span class="line"></span><br><span class="line">&lt;video width=<span class="string">&quot;750&quot;</span> height=<span class="string">&quot;400&quot;</span> src=<span class="string">&quot;time.mp4&quot;</span>&gt;&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增绘图功能 <code> canvas svg</code></p>
+</li>
+</ol>
+<h3 id="1-4-lt-DOCTYPE-HTML-gt-的作用"><a href="#1-4-lt-DOCTYPE-HTML-gt-的作用" class="headerlink" title="1.4  &lt;!DOCTYPE HTML&gt;的作用"></a>1.4 <code> &lt;!DOCTYPE HTML&gt;</code>的作用</h3><p>声明文档类型为 HTML</p>
+<h3 id="1-5-cookies，sessionStorage-和-localStorage-的区别"><a href="#1-5-cookies，sessionStorage-和-localStorage-的区别" class="headerlink" title="1.5 cookies，sessionStorage 和 localStorage 的区别"></a>1.5 cookies，sessionStorage 和 localStorage 的区别</h3><ul>
+<li>cookie 是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密），一般用来携带</li>
+<li>cookie 数据始终在同源的 http 请求中携带（即使不需要），记会在浏览器和服务器间来回传递</li>
+<li>sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存</li>
+<li>存储大小：<ul>
+<li>cookie 数据大小不能超过 4k</li>
+<li>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比 cookie 大得多，可以达到 5M 或更大</li>
+</ul>
+</li>
+<li>有效时间：<ul>
+<li>localStorage 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+<li>sessionStorage 数据在当前浏览器窗口关闭后自动删除</li>
+<li>cookie 设置的 cookie 过期时间之前一直有效，即使窗口或浏览器关闭</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-6-iframe"><a href="#1-6-iframe" class="headerlink" title="1.6 iframe"></a>1.6 iframe</h3><p>iframes 提供了一个简单的方式把一个网站的内容嵌入到另一个网站中。</p>
+<p>缺点：</p>
+<ul>
+<li>iframe 会阻塞主页面的 Onload 事件</li>
+<li>搜索引擎的检索程序无法解读这种页面，不利于 SEO</li>
+</ul>
+<h3 id="1-7-行内元素有哪些？块级元素有哪些？-空-void-元素有那些？行内元素和块级元素有什么区别？"><a href="#1-7-行内元素有哪些？块级元素有哪些？-空-void-元素有那些？行内元素和块级元素有什么区别？" class="headerlink" title="1.7 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？"></a>1.7 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？</h3><ul>
+<li>行内元素有：a b span img input select strong</li>
+<li>块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</li>
+<li>空元素：<code>&lt;br&gt; </code></li>
+<li>行内元素不可以设置宽高，不独占一行</li>
+<li>块级元素可以设置宽高，独占一行</li>
+</ul>
+<h3 id="1-8-display-none-与-visibility-hidden-的区别"><a href="#1-8-display-none-与-visibility-hidden-的区别" class="headerlink" title="1.8 display: none;与 visibility: hidden;的区别"></a>1.8 display: none;与 visibility: hidden;的区别</h3><ul>
+<li><p>联系：它们都能让元素不可见</p>
+</li>
+<li><p>Vue 的<code>v-show</code>相当于<code>display: none</code> 而 <code>v-if</code>是不在 dom 中渲染该节点</p>
+</li>
+<li><p>区别：</p>
+</li>
+<li><ul>
+<li>display:none;会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden;不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见</li>
+<li>display: none;是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden;是继承属性，子孙节点消失由于继承了 hidden，通过设置 visibility: visible;可以让子孙节点显式</li>
+<li>修改常规流中元素的 display 通常会造成文档重排。修改 visibility 属性只会造成本元素的重绘。</li>
+<li>读屏器不会读取 display: none;元素内容；会读取 visibility: hidden;元素内容</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-9-清除浮动"><a href="#1-9-清除浮动" class="headerlink" title="1.9 清除浮动"></a>1.9 清除浮动</h3><p>清除浮动的几种方式，各自的优缺点</p>
+<ul>
+<li><p>使用空标签清除浮动 clear:both（缺点，增加无意义的标签）</p>
+</li>
+<li><p>使用 overflow:auto（使用 zoom:1 用于兼容 IE，缺点：内部宽高超过父级 div 时，会出现滚动条）</p>
+</li>
+<li><p>用 afert 伪元素清除浮动(IE8 以上和非 IE 浏览器才支持。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// dom</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box blue&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">.main &#123; border:20px solid blueviolet; &#125; .main::after &#123; content:&quot;&quot;;</span><br><span class="line">display:table; /*采用此方法可以有效避免浏览器兼容问题*/ clear:both; &#125; .box &#123;</span><br><span class="line">width: 100px; height: 100px; &#125; .blue&#123; background-color: blue; float: left; &#125;</span><br><span class="line">//css</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="1-10-css3-有哪些新特性"><a href="#1-10-css3-有哪些新特性" class="headerlink" title="1.10 css3 有哪些新特性"></a>1.10 css3 有哪些新特性</h3><ul>
+<li><p>新增各种 css 选择器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 伪元素选择器</span></span><br><span class="line">::before ::after ::first-line ::first-letter ::section</span><br><span class="line"><span class="comment">// 伪类选择器</span></span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:first-child     选中第一个子元素</span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:last-child     选中最后一个子元素</span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:nth-<span class="title function_">child</span>(n)  选中第五个子元素</span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:nth-<span class="title function_">child</span>(odd)  选中偶数行</span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:nth-<span class="title function_">child</span>(even)  选中奇数行</span><br><span class="line">.<span class="property">list</span>&gt;<span class="attr">li</span>:nth-<span class="title function_">child</span>(<span class="number">2n</span>)  支持数学表达式，选中偶数行</span><br><span class="line">.<span class="property">list</span>&gt;:nth-<span class="keyword">of</span>-<span class="title function_">type</span>(<span class="number">1</span>)  选择类型匹配的，选中的是第五个li,跳过ul中其他类型</span><br></pre></td></tr></table></figure>
+
+<p><strong>ps 一个坑：伪类选择器，比如<code>last-child </code>或者<code>last-of-type</code> 的意思是，既要是最后一个，还得是指定的类型</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Dorothy1224/article/details/95206594">示例链接</a></p>
+</li>
+<li><p>flex 布局</p>
+</li>
+<li><p>圆角 <code>border-radius</code></p>
+</li>
+<li><p>阴影和反射<code>shadow</code></p>
+</li>
+<li><p>文字特效<code>text-shadow</code></p>
+</li>
+<li><p>线性渐变<code>linear-gradient(#fff2d9, #fff2d9 50%, #f9e7b9 51%, #f9e7b9)</code></p>
+</li>
+<li><p>旋转<code>transform</code> 包含<code>scale (缩放) rotate (旋转) skew (倾斜)</code></p>
+</li>
+<li><p>媒体查询<code>@media only screen and (min-width: 1200px) &#123;&#125;</code></p>
+</li>
+<li><p>过度<code>transition</code></p>
+</li>
+<li><p>动画<code>animation</code></p>
+</li>
+</ul>
+<h3 id="1-11-display-有哪些值？说明他们的作用"><a href="#1-11-display-有哪些值？说明他们的作用" class="headerlink" title="1.11 display 有哪些值？说明他们的作用"></a>1.11 display 有哪些值？说明他们的作用</h3><ul>
+<li>block 象块类型元素一样显示。</li>
+<li>inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。</li>
+<li>list-item 象块类型元素一样显示，并添加样式列表标记。</li>
+<li>table 此元素会作为块级表格来显示</li>
+<li>inherit 规定应该从父元素继承 display 属性的值</li>
+</ul>
+<h3 id="1-12-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？"><a href="#1-12-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？" class="headerlink" title="1.12 介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？"></a>1.12 介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？</h3><p>有两种， IE 盒子模型、W3C 盒子模型；内容(content)、填充(padding)、边框(border)、边界(margin) ；</p>
+<ul>
+<li>盒模型(box-sizing:content-box): width/height 为 content 的宽高。</li>
+<li>怪异模型(box-sizing:border-box)：width/height 为 content + padding + border 的宽高。</li>
+</ul>
+<h3 id="1-13-position-的值，-relative-和-absolute-定位原点是"><a href="#1-13-position-的值，-relative-和-absolute-定位原点是" class="headerlink" title="1.13 position 的值， relative 和 absolute 定位原点是"></a>1.13 position 的值， relative 和 absolute 定位原点是</h3><ul>
+<li>absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。</li>
+<li>fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+<li>relative：生成相对定位的元素，相对于其正常位置进行定位。</li>
+<li>static 默认值。没有定位，元素出现在正常的流中。</li>
+<li>inherit 规定从父元素继承 position 属性的值。</li>
+</ul>
+<h3 id="1-14-display-inline-block-出现缝隙解决方案"><a href="#1-14-display-inline-block-出现缝隙解决方案" class="headerlink" title="1.14 display:inline-block 出现缝隙解决方案"></a>1.14 display:inline-block 出现缝隙解决方案</h3><ul>
+<li>使用 margin 负值（大概-5px）</li>
+<li>使用 font-size:0</li>
+</ul>
+<h3 id="1-15-从输入网址，到页面展示，浏览器做了什么"><a href="#1-15-从输入网址，到页面展示，浏览器做了什么" class="headerlink" title="1.15 从输入网址，到页面展示，浏览器做了什么"></a>1.15 从输入网址，到页面展示，浏览器做了什么</h3><ol>
+<li>DNS 解析 ip 地址。</li>
+<li>三次握手建立 Tcp 链接。</li>
+<li>发送 Http 请求。</li>
+<li>服务器处理请求。</li>
+<li>服务器返回响应结果。</li>
+<li>关闭 Tcp 链接。</li>
+<li>浏览器解析 HTML。</li>
+<li>浏览器布局渲染页面。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000012092552">细说浏览器输入 URL 后发生了什么</a></p>
+<h3 id="1-16-请求头的作用"><a href="#1-16-请求头的作用" class="headerlink" title="1.16 请求头的作用"></a>1.16 请求头的作用</h3><p>请求头主要用来携带客户端向服务器发送请求的一些描述，比如 http 协议类型，客户端所接受的编码方式，发送内容的长度等；某些用户信息也携带在请求头中，比如说 cookie，token 等；还携带了 referer 信息。</p>
+<p>referer 信息代表当前请求的源头，可以用来防止盗链，防止恶意请求。</p>
+<p>响应头主要用来携带服务器返回的 content 的一些描述，比如编码类型，内容长度等。</p>
+<h3 id="1-17-同源策略"><a href="#1-17-同源策略" class="headerlink" title="1.17 同源策略"></a>1.17 同源策略</h3><p>浏览器中的<strong>协议、域名、端口号</strong>相同则属于同源。</p>
+<p>同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。</p>
+<p>什么要有同源策略：主要是为了保护用户的网络安全。禁止对不同源的 DOM 进行访问，禁止向不同源的服务器发起 HTTP 请求。</p>
+<h3 id="1-18-几种常用-css-布局"><a href="#1-18-几种常用-css-布局" class="headerlink" title="1.18 几种常用 css 布局"></a>1.18 几种常用 css 布局</h3><h4 id="1-18-1-居中"><a href="#1-18-1-居中" class="headerlink" title="1.18.1 居中"></a>1.18.1 居中</h4><ul>
+<li><p>文字居中</p>
+<ul>
+<li><p>垂直居中</p>
+<ol>
+<li>为文字添加相等的 padding-top 和 padding-bottom</li>
+<li>单行文字且不会换行展示使<code>line-height</code>与容器<code>height</code>相等</li>
+</ol>
+</li>
+<li><p>水平居中</p>
+<p>设置<code>text-aligin:center</code></p>
+</li>
+</ul>
+</li>
+<li><p><code>dom</code>居中</p>
+<ol>
+<li><p>绝对定位配合<code>transform</code>居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>flex</code>布局</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="1-18-2-两栏布局"><a href="#1-18-2-两栏布局" class="headerlink" title="1.18.2 两栏布局"></a>1.18.2 两栏布局</h4><ol>
+<li><p>BFC 实现两栏布局</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--html--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span>左边左边左边左边左边左边左边左边左边左边<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">    右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--css--&gt;</span></span><br><span class="line">.container &#123; width:100%; &#125; .left &#123;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">float:left;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">width:100px; background-color: red; &#125; .right &#123;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">overflow:hidden;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">background-color: blue; min-height:100vh; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex 实现两栏布局</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--html--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span>左边左边左边左边左边左边左边左边左边左边<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">    右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--css--&gt;</span></span><br><span class="line">.container &#123; width:100%;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">display:flex;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">&#125; .left &#123; width:100px; background-color: red; &#125; .right &#123;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">flex:1;</span><br><span class="line"><span class="comment">&lt;!--!important--&gt;</span></span><br><span class="line">background-color: blue; &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="1-19-BFC（Block-Formatting-Context-块格式化上下文）"><a href="#1-19-BFC（Block-Formatting-Context-块格式化上下文）" class="headerlink" title="1.19 BFC（Block-Formatting-Context 块格式化上下文）"></a>1.19 BFC（Block-Formatting-Context 块格式化上下文）</h3><ul>
+<li><p>作用：</p>
+<ol>
+<li><p>解决外边距合并问题。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box blue&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">.container &#123; position: absolute; border: 5px solid lightcoral; &#125; .box &#123;</span><br><span class="line">width:100px; height:100px; padding:100px; &#125; .red &#123; background-color:red; &#125;</span><br><span class="line">.blue &#123; background-color:blue; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://dqtwdd.top/cdn/img/OuterMargin.jpg" alt="OuterMargin"></p>
+<p>以上代码实际展示出来是这个样子的，可以很明显的看出来了两个块之间的间距只有 100px，使用 BFC 的解决办法就是在两个块外层加一个 BFC 的容器。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bfc&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bfc&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box blue&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">.container &#123; position: absolute; border: 5px solid lightcoral; &#125; .bfc &#123;</span><br><span class="line">overflow:hidden &#125; .box &#123; width:100px; height:100px; &#125; .red &#123;</span><br><span class="line">background-color:red; &#125; .blue &#123; background-color:blue; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://dqtwdd.top/cdn/img/OuterMarginAfterBFC.jpg" alt="OuterMarginAfterBFC"></p>
+</li>
+<li><p>解决 float 导致的高度塌陷问题，清除浮动。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">.container &#123; border: 5px solid lightcoral; width: 100%; &#125; .box &#123; width:</span><br><span class="line">100px; height: 100px; &#125; .red &#123; background-color: red; float: left; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://dqtwdd.top/cdn/img/Float.jpg" alt="Float"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">.container &#123; overflow: hidden; border: 5px solid lightcoral; width: 100%; &#125;</span><br><span class="line">.box &#123; width: 100px; height: 100px; &#125; .red &#123; background-color: red; float:</span><br><span class="line">left; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://dqtwdd.top/cdn/img/FloatAfterBFC.jpg" alt="FloatAfterBFC"></p>
+</li>
+<li><p>用来布局（比如经典的两栏布局）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">.container &#123; width: 100%; &#125; .left &#123; float:left; min-height:100vh;</span><br><span class="line">background-color: red; &#125; .right &#123; background-color: blue; min-height:100vh;</span><br><span class="line">overflow: hidden; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://dqtwdd.top/cdn/img/TwoLayout.jpg" alt="TwoLayout"></p>
+</li>
+</ol>
+</li>
+<li><p>形成 BFC 的条件</p>
+<ol>
+<li>浮动元素，float 除 none 以外的值；</li>
+<li>绝对定位元素，position（absolute，fixed）；</li>
+<li>display 为以下其中之一的值 inline-blocks，table-cells，table-captions；</li>
+<li>overflow 除了 visible 以外的值（hidden，auto，scroll）</li>
+</ol>
+</li>
+</ul>
+<h3 id="1-20-实现一个三角形-css"><a href="#1-20-实现一个三角形-css" class="headerlink" title="1.20 实现一个三角形 css"></a>1.20 实现一个三角形 css</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-top-color</span>: ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-21-tcp-udp"><a href="#1-21-tcp-udp" class="headerlink" title="1.21 tcp/udp"></a>1.21 tcp/udp</h3><ul>
+<li><p>tcp 全称 传输控制协议。是一种面向连接的，可靠的，基于字节流的传输通信协议。</p>
+<p>tcp 链接过程需要经过三次握手：</p>
+<ol>
+<li>我要发请求了，ok 吗？（客户端向服务端发送请求报文段，客户端进入 SYN_SEND（请求链接）状态）</li>
+<li>ok！我准备好了，发吧！（服务端收到连接请求报文段后，如果同意链接，则发送一个应答，同时客户端进入 SYN_RECEIVE（准备接收）状态）</li>
+<li>ok，我也准备好了，这就发。（客户端收到链接同意的应答后，还要向服务器发送一个确认报文，发送完成后，客户端进入 ESTABLISHED（已连接）状态，服务端接收到请求后也进入 ESTABLISHED 状态，此时连接建立成功）</li>
+</ol>
+<p>然后就开始了。第三次握手是为了防止出现失效的链接请求报文被服务端接受的情况。</p>
+<p>断开链接过程需要经过四次握手：</p>
+<ol>
+<li>我没啥要发的了，可以断开链接吗？（客户端进入 FIN_WAIT_1 状态）</li>
+<li>我看看啊，要是没有了我告诉你。（此时，服务端进入 CLOSE_WAIT 状态，服务端已经不再接受客户端发送的数据，但是仍然可以发送数据给客户端，客户端手收到后进入 FIN_WAIT_2 状态）</li>
+<li>（如果有没发完的继续发送，发送完成后）我没啥发的了，你也断开吧。（此时，服务端进入 LAST_ACK 状态，等客户端发送 ACK 确认连接后就关闭链接）</li>
+<li>好的，我也断开了。（此时客户端进入 TIME_WAIT 状态，在一段时间内没收到 B 的重发请求的话，就进入 CLOSED 状态，此条信息发送的就是 ACK 链接，B 收到确认应答后，就进入 CLOSED 状态）</li>
+</ol>
+<p>TCP 特点：</p>
+<ul>
+<li>面向连接 是指发送数据之前必须在两端建立链接。</li>
+<li>仅支持单播传输 每条 TCP 传输只能有两个端点，只能进行点对点的数据传输，不支持多播和广播的传输方式。</li>
+<li>面向字节流 TCP 不像 UDP 一样以一个一个报文独立的传输，而是在不保留报文边界的情况下以字节流方式进行传输。</li>
+<li>可靠传输 TCP 为了保证报文传输的可靠，给每一个包一个需要，同时序号也保证了传输到接受端实体包的按序接受，然后接收端对已经接收到的字节发挥一个相应的确认（ACK），如果发送端实体在合理往返延时内未收到确认，那么就会将对应的数据进行重新传送。</li>
+</ul>
+</li>
+<li><p>UDP 全称用户数据报协议，是一种无连接协议。UDP 具有不提供数据包分组、组装和不能对数据包进行排序的缺点，也就是说，报文发送后，是无法得知是否完整到达的。</p>
+</li>
+</ul>
+<p>应用场景：文件传输等。</p>
+<p>UDP 特点：</p>
+<ul>
+<li>面向无连接。 不需要进行连接，想发数据就开始发送。</li>
+<li>有单播，多播，广播的功能 UDP 不只支持一对一的传输方式，还支持一对多，多对多，多对一的方式。</li>
+<li>UDP 是面向报文的。</li>
+<li>不可靠 不知道是否接受，是否有丢包。</li>
+</ul>
+<p>应用场景：电话会议，视频等。</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">UDP</th>
+<th>TCP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">是否连接</td>
+<td align="left">无连接</td>
+<td>面向连接</td>
+</tr>
+<tr>
+<td align="left">是否可靠</td>
+<td align="left">不可靠传输，不使用流量控制和拥塞控制</td>
+<td>可靠传输，使用流量控制和拥塞控制</td>
+</tr>
+<tr>
+<td align="left">连接对象个数</td>
+<td align="left">支持一对一，一对多，多对一和多对多交互通信</td>
+<td>只能是一对一通信</td>
+</tr>
+<tr>
+<td align="left">传输方式</td>
+<td align="left">面向报文</td>
+<td>面向字节流</td>
+</tr>
+<tr>
+<td align="left">首部开销</td>
+<td align="left">首部开销小，仅 8 字节</td>
+<td>首部最小 20 字节，最大 60 字节</td>
+</tr>
+<tr>
+<td align="left">适用场景</td>
+<td align="left">适用于实时应用（IP 电话、视频会议、直播等）</td>
+<td>适用于要求可靠传输的应用，例如文件传输</td>
+</tr>
+</tbody></table>
+<h3 id="1-22-html-加载顺序"><a href="#1-22-html-加载顺序" class="headerlink" title="1.22 html 加载顺序"></a>1.22 html 加载顺序</h3><ul>
+<li>下载的顺序就是从上到下，渲染的顺序也是从上到下，下载和渲染时同时进行的。</li>
+<li>在渲染到页面的某一部分时，其上面所有部分都已经下载完成（并不是说所有相关联的元素都已经下载完）</li>
+<li>如果遇到语义解释性的标签嵌入文件（Js 脚本，Css 样式），那么此时浏览器的下载过程会启用单独的链接进行下载。</li>
+<li>样式表在下载完成后，将和以前下载的所有样式表一起进行解析，解析完成后，将对此前所有元素（含以前已经渲染的）重新进行渲染。</li>
+<li>Js、Css 中如果有重定义，后定义的函数将覆盖前定义的函数。</li>
+</ul>
+<p>html：贯穿整个页面；</p>
+<p>css（三种声明方式）：</p>
+<ol>
+<li>外联样式表：在 head 标签中，使用 link 标签的 href 属性来引用后缀名为.css 的 css 样式文件。</li>
+<li>内联样式表：在 head 标签下的 style 标签，选择器+样式声明。</li>
+<li>外部样式表：在标签的 style 属性中添加 css 样式声明。</li>
+</ol>
+<p>JavaScript：在<code>&lt;script&gt;</code>标签中，可以在 head 标签汇总，也可以在 body 标签中。</p>
+<p>运行顺序：从上到下运行。</p>
+<p>先解析 head 标签中的代码：</p>
+<p>head 标签会包含一些引用外部文件的代码，从开始运行就会下载这些被引用的文件。</p>
+<p>当遇到<code>&lt;script&gt;</code>标签时，浏览器会暂停解析（下载不会暂停），将控制权交给 JavaScript 引擎（解释器）。</p>
+<p>如果<code>&lt;script&gt;</code>标签引用了外部脚本，就下载该脚本，否则就直接执行，执行完成后将控制权交给浏览器渲染引擎。</p>
+<p>当 head 中代码解析完毕，会开始解析 body 中的代码：</p>
+<p>如果 head 中引用的外部文件没有下载完，将会继续下载。</p>
+<p>此时如果遇到 body 标签中的<code>&lt;script&gt;</code>，同样会将控制权交给 JavaScript 引擎来解析 JavaScript。</p>
+<p>解析完毕后将控制权交还给浏览器渲染引擎</p>
+<p>当 body 中的代码全部执行完毕，并且整个页面的 css 样式加载完毕后，css 会重新渲染整个页面的 html。</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">打赏</div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dqtwdd.gitee.io/2022/11/21/20221121-interview-html/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E4%BD%9C/" rel="tag">工作</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/11/21/20221121-interview-other/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            面试准备-webpack/xss/其他
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/11/21/20221121-interview-vue/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">面试准备-vue</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "KNI0N4Khdh2ispLr2iFoS9CU-gzGzoHsz",
+    app_key: "hhc6Qpb7eOUWNirF5vBNgFfN",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2018-2024
+        <i class="ri-heart-fill heart_icon"></i> WangDong
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="咚咚咚咚咚棟"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+
+<script src="/js/clickBoom2.js"></script>
+
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru01.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>
